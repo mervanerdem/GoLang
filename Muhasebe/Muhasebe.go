@@ -13,5 +13,5 @@ func main() {
 	fmt.Scan(&sname)
 	fmt.Println("Your Full Name: ")
 	fmt.Println(name + " " + sname)
-
+	fmt.Println("First Commit is Done!")
 }
