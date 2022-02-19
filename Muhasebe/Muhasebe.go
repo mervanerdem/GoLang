@@ -14,5 +14,4 @@ func main() {
 	fmt.Println("Your Full Name: ")
 	fmt.Println(name + " " + sname)
 
-	//Hello World
 }
