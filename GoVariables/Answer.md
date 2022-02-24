@@ -1,4 +1,4 @@
-Output
+Output:
     
     50
     Hello Word!

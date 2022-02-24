@@ -14,6 +14,6 @@ func main() {
 	var z = x + y  // mathematical operation used
 	fmt.Println(z) //Output
 
-	var a, b, c = 1, 2, 3 //You can use this method sameway
+	var a, b, c = 1, 2, 3 //You can use this method sameway!
 	fmt.Println(a, b, c)  //Output
 }
