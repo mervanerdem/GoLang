@@ -9,8 +9,14 @@ func main() {
 
 	fmt.Println(myNum, myWord, myBool)
 
+	//For see Which data type used
+	fmt.Printf("%T ", myNum)
+	fmt.Printf("%T ", myWord)
+	fmt.Printf("%T ", myBool)
+
 }
 
 /* Output
 123 Hi! true
+int string bool
 */
