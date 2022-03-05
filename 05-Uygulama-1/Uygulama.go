@@ -24,5 +24,21 @@ func main() {
 	   		}
 	   	}
 	*/
+	/* 	//3.Örnek)Switch FallThrough ifadesini açıklayınız.
+	   	//fallThrough ifadesi sorgu bittiğinde break yerine diğer ifadeleri de sorgulamasını istemekte.
+
+	   	switch i := 3; {
+	   	case i < 5:
+	   		fmt.Println(i, "5'ten küçük")
+	   		fallthrough
+	   	case i < 10:
+	   		fmt.Println(i, "10'ten küçük")
+	   		fallthrough
+	   	case i < 15:
+	   		fmt.Println(i, "15'ten küçük")
+	   		fallthrough
+	   	case i < 20:
+	   		fmt.Println(i, "20'ten küçük")
+	   	} */
 
 }
