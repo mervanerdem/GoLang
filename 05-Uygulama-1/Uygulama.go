@@ -1,8 +1,6 @@
 //Yapılmak istenen uygulamanın yorum satırını kaldırınca deneyebileceksiniz.
 package main
 
-import "fmt"
-
 func main() {
 	/* //1.Örnek) 1 ile 10 arasındaki sayıları tek ve çift olarak yazdırın
 	for i := 1; i <= 10; i++ {
@@ -16,14 +14,15 @@ func main() {
 
 	} */
 
-	//2.Örnek) For yapısını kullanarak Go dilinde olmayan While Döngüsüne örnek veriniz.
-	i := 10
-	for true {
-		i--
-		fmt.Println(i)
-		if i <= 0 {
-			break
-		}
-	}
+	/* 	//2.Örnek) For yapısını kullanarak Go dilinde olmayan While Döngüsüne örnek veriniz.
+	   	i := 10
+	   	for true {
+	   		i--
+	   		fmt.Println(i)
+	   		if i <= 0 {
+	   			break
+	   		}
+	   	}
+	*/
 
 }
