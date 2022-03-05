@@ -1,6 +1,8 @@
 //Yapılmak istenen uygulamanın yorum satırını kaldırınca deneyebileceksiniz.
 package main
 
+import "fmt"
+
 func main() {
 	/* //1.Örnek) 1 ile 10 arasındaki sayıları tek ve çift olarak yazdırın
 	for i := 1; i <= 10; i++ {
@@ -41,4 +43,16 @@ func main() {
 	   		fmt.Println(i, "20'ten küçük")
 	   	} */
 
+	//4.Örnek) 1 ile 50 arasındaki asal sayıları gösteren program
+	var x, y int
+	for x = 2; x <= 50; x++ {
+		for y = 2; float64(y) < float64(x)/float64(y); y++ {
+			if x%y == 0 {
+				break
+			}
+		}
+		if y > x/y {
+			fmt.Println(x, "bir asal sayıdır.")
+		}
+	}
 }
