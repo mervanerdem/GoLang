@@ -14,6 +14,10 @@ func main() {
 	t := x + int(y) // bu şekilde de veri dönüştürme yapılabilir.
 	fmt.Println(t)
 
+	a := "109"
+	b := 109
+	fmt.Println(a + string(b))
+
 }
 
 /* SONUÇ
