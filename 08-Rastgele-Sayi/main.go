@@ -23,14 +23,12 @@ func main() {
 	checkError(err)
 	for i := 0; i < 10; i++ {
 		if i < 9 {
+			guess, err = getInput()
+			checkError(err)
 			if num > guess {
 				fmt.Print("Tahmin ettiğiz sayı daha küçük değerden. Tekrar deneyiniz: ")
-				guess, err = getInput()
-				checkError(err)
 			} else if num < guess {
 				fmt.Print("Tahmin ettiğiz sayı daha büyük değerden. Tekrar deneyiniz: ")
-				guess, err = getInput()
-				checkError(err)
 			} else {
 				fmt.Println("Doğru Tahmin ettiniz. ")
 				break
