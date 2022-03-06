@@ -27,7 +27,7 @@ func main() {
 				fmt.Print("Tahmin ettiğiz sayı daha küçük değerden. Tekrar deneyiniz: ")
 				guess, err = getInput()
 				checkError(err)
-			} else if num > guess {
+			} else if num < guess {
 				fmt.Print("Tahmin ettiğiz sayı daha büyük değerden. Tekrar deneyiniz: ")
 				guess, err = getInput()
 				checkError(err)
@@ -42,9 +42,9 @@ func main() {
 
 }
 
-func randNum(min, max int) int {
-	rand.Seed(time.Now().Unix())
-	return (rand.Intn(max-min) + min)
+func randNum(min, max int) int { //Rastgele numara bulma fonksiyonu
+	rand.Seed(time.Now().Unix())      //zamanda herhangi bir anda bir zamanı durdurur ve buna bağlı bir değer üretir.
+	return (rand.Intn(max-min) + min) //üretilen değeri istenen aralığa göre modunu alır ve return eder.
 }
 
 func getInput() (int, error) {
