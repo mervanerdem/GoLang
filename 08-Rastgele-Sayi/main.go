@@ -36,7 +36,7 @@ func main() {
 				break
 			}
 		} else {
-			fmt.Println("Bilemediniz.")
+			fmt.Println("Bilemediniz. Aradığınız sayı:", num)
 		}
 	}
 
