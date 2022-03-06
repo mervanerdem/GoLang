@@ -23,16 +23,16 @@ func main() {
 	checkError(err)
 	for i := 0; i < 10; i++ {
 		if i < 9 {
-			guess, err = getInput()
-			checkError(err)
 			if num > guess {
-				fmt.Print("Tahmin ettiğiz sayı daha küçük değerden. Tekrar deneyiniz: ")
+				fmt.Print("Tahmin ettiğiz sayı daha küçük değerden. Kalan Tahmin Sayınız:", 9-i, "\nTekrar deneyiniz: ")
 			} else if num < guess {
-				fmt.Print("Tahmin ettiğiz sayı daha büyük değerden. Tekrar deneyiniz: ")
+				fmt.Print("Tahmin ettiğiz sayı daha büyük değerden. alan Tahmin Sayınız:", 9-i, "\nTekrar deneyiniz: ")
 			} else {
-				fmt.Println("Doğru Tahmin ettiniz. ")
+				fmt.Println(i+1, "Sorguda doğru tahmin ettiniz. ")
 				break
 			}
+			guess, err = getInput()
+			checkError(err)
 		} else {
 			fmt.Println("Bilemediniz. Aradığınız sayı:", num)
 		}
