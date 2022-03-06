@@ -9,6 +9,11 @@ func main() {
 	b := 18
 	c := sum(a, b) //toplama yapan fonksiyon
 	write(c)       //içine yazılan değeri ekrana yazdıran fonksiyon
+	a = 100
+	b = 80
+	c = sum(a, b) // farklı değerlerin toplanması
+	fmt.Print("İkinci ")
+	write(c)
 
 }
 
