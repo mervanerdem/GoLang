@@ -32,31 +32,51 @@ func main() {
 	   	fmt.Println("My Slc4", mySlc4)
 	   	fmt.Println("My Slc5", mySlc5)
 	*/
-	//3-slicelar için copy metodu ve assign(=) farkını açıklayın.
-	mySlc := []int{0, 1, 2}
-	mySlc2 := make([]int, 2)
-	mySlc3 := make([]int, 3)
+	/* 	//3-slicelar için copy metodu ve assign(=) farkını açıklayın.
+	   	mySlc := []int{0, 1, 2}
+	   	mySlc2 := make([]int, 2)
+	   	mySlc3 := make([]int, 3)
 
-	fmt.Println(mySlc)
-	fmt.Println(mySlc2)
-	fmt.Println(mySlc3)
+	   	fmt.Println(mySlc)
+	   	fmt.Println(mySlc2)
+	   	fmt.Println(mySlc3)
 
-	fmt.Println("-----------")
+	   	fmt.Println("-----------")
 
-	copy(mySlc2, mySlc) //copy
-	mySlc3 = mySlc      //append (=)
+	   	copy(mySlc2, mySlc) //copy
+	   	mySlc3 = mySlc      //append (=)
 
-	fmt.Println(mySlc)
-	fmt.Println(mySlc2)
-	fmt.Println(mySlc3)
+	   	fmt.Println(mySlc)
+	   	fmt.Println(mySlc2)
+	   	fmt.Println(mySlc3)
 
-	fmt.Println("-----------")
+	   	fmt.Println("-----------")
 
-	mySlc2[1] = 3 //kopyalanan
-	mySlc3[0] = 7 // atanan
+	   	mySlc2[1] = 3 //kopyalanan
+	   	mySlc3[0] = 7 // atanan
 
-	fmt.Println(mySlc)
-	fmt.Println(mySlc2)
-	fmt.Println(mySlc3)
+	   	fmt.Println(mySlc)
+	   	fmt.Println(mySlc2)
+	   	fmt.Println(mySlc3)
+	*/
+
+	//4-map gösterimi ile yazar ve yazar kitabının isimlerini for range ile gösterin.
+
+	myMap := map[string][]string{
+		"Yaşar Kemal":    []string{"İnce Memed", "Yer Demir Gök Bakır"},
+		"Sabahattin Ali": []string{"Kuyucaklı Yusuf", "Kürk Mantolu Madonna", "Değirmen"},
+	}
+	/* fmt.Println(myMap)
+	fmt.Println(myMap["Mehmet"])
+	fmt.Println(myMap["Mehmet"][0]) */
+
+	for key, value := range myMap {
+		fmt.Println("Yazar:", key)
+		fmt.Println("Kitapları:")
+		for i, v := range value {
+			fmt.Println("\t", i+1, v)
+		}
+
+	}
 
 }
