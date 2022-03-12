@@ -21,19 +21,31 @@ func main() {
 		fmt.Println(&(*(&x))) // //x'in adresinin gösterdiği değerin adresi yani-> x'in adresi
 		// * adresteki değeri gösterir, & değerin adresini gösterir. Yani birbirine dönüşüm yapılabilir. */
 
-	x1 := 12
-	x2 := &x1
+	/* 	x1 := 12
+	   	x2 := &x1
 
-	fmt.Println(x1, x2)
-	fmt.Println(x1, *x2) // adres gösteren x2 adresin gösterdiği değeri gösterdi o da x'e eşit
+	   	fmt.Println(x1, x2)
+	   	fmt.Println(x1, *x2) // adres gösteren x2 adresin gösterdiği değeri gösterdi o da x'e eşit
 
-	*x2 = 8 // adresteki değere 8 sayısını atadık
+	   	*x2 = 8 // adresteki değere 8 sayısını atadık
 
-	fmt.Println(x1, *x2) // bu şekilde x'in de değeri de değişmiş oldu.
+	   	fmt.Println(x1, *x2) // bu şekilde x'in de değeri de değişmiş oldu.
 
-	x3 := &x1
-	*x3 = 92
+	   	x3 := &x1
+	   	*x3 = 92
 
-	fmt.Println(x1, *x2, *x3)
+	   	fmt.Println(x1, *x2, *x3) */
+
+	x1 := [4]int{0, 1, 2, 3} //Array'lerde pointer işlemi
+	x2 := x1
+	fmt.Println("x1 ve x2", x1, x2)
+	x2[0] = 5
+	fmt.Println("x1 ve x2", x1, x2) // Arraylarde pass by value kullanılır. Yani sadece değer ataması
+
+	x3 := []int{0, 1, 2, 3} //Slice'larda pointer işlemi
+	x4 := x3
+	fmt.Println("x3 ve x4", x3, x4)
+	x4[0] = 8
+	fmt.Println("x3 ve x4", x3, x4) //Slice'larda ise pass by referanceses-> Referans kopyalanır.
 
 }
