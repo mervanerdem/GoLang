@@ -1,9 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type mile float64
 type kilometer float64
+
+func toKm(m mile) kilometer {
+	return kilometer(m * 1.6)
+}
+
+func toMile(k kilometer) mile {
+	return mile(k * 0.625)
+}
 
 func main() {
 
@@ -17,11 +27,14 @@ func main() {
 	   	fmt.Printf("\n%T\n%v\n", m3, m3)
 	*/
 
-	m2 := mile(1.2)
-	fmt.Println("m1+m2:", m1+m2) // Aynı veri tipinde olduğundan toplanmasında bir mahsur bulunmamakta.
+	/* 	m2 := mile(1.2)
+	   	fmt.Println("m1+m2:", m1+m2) // Aynı veri tipinde olduğundan toplanmasında bir mahsur bulunmamakta. */
 
-	k1 := kilometer(10.1)
+	k1 := toKm(m1) //yazdığımız fonksiyon ile doğrudan mile değerinde olan bir değişken km'ye dönüşmüş oluyor.
 
-	fmt.Printf("%T\n%v\n", k1, k1)
+	fmt.Printf("%T\n%0.2f km\n", k1, k1)
+
+	m1 = toMile(k1)
+	fmt.Printf("%T\n%0.2f mile\n", m1, m1)
 
 }
