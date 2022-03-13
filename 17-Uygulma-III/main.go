@@ -26,7 +26,8 @@ func main() {
 	fmt.Println(x)
 }
 */
-//3-Underlying Type struct olan Rectangle type oluşturunuz.
+
+/* //3-Underlying Type struct olan Rectangle type oluşturunuz.
 //display,area,circumference metodlarını yazınız.
 
 package main
@@ -57,6 +58,43 @@ func main() {
 	fmt.Println("Alanı:", r1.area())
 	fmt.Println("Çevresi:", r1.circumference())
 }
-
+*/
 //4- 4 adet user'ı struct yapısıyla farklı şekilde tanımlayınız.
 //name, age, int -> For döngüsüyle kullanıcıları gösteriniz.
+
+package main
+
+import (
+	"fmt"
+	"gtin" //Kendi yazdığım bir kütüphane örnek kodları Kütüphane dosyasında bulunmakta. Kendi çalışma dosyanıza indirip kullanabilirsiniz.
+)
+
+type user struct {
+	name string
+	age  int
+}
+
+func getUser() []user {
+	fmt.Println("Kaç tane çalışanınız var")
+	a, _ := gtin.GetInt()
+	var us user
+	slc := []user{}
+
+	for i := 0; i < a; i++ {
+		fmt.Print("Name:")
+		us.name, _ = gtin.GetString()
+		fmt.Print("Age:")
+		us.age, _ = gtin.GetInt()
+
+		slc = append(slc, us)
+	}
+
+	return slc
+}
+
+func main() {
+	slc := getUser()
+	for index, value := range slc {
+		fmt.Println("User", index+1, value)
+	}
+}
