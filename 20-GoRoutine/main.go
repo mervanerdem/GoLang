@@ -10,7 +10,7 @@ func main() {
 
 	go printX()
 	go printY()
-	time.Sleep(time.Second)    //
+	time.Sleep(time.Second)    //Ana Fonksiyonu bir saniye bekletiyoruz diğer işlemler yapılması için.
 	fmt.Println("Main Bitişi") // Çalışmasını bitirmeden main GoRoutini bittiğinden yalnızca çıktı görülmekte.
 }
 
