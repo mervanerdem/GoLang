@@ -6,9 +6,9 @@ import (
 
 func main() {
 
-	printX()
-	printY()
-
+	go printX()
+	go printY()
+	fmt.Println("Main Bitişi")
 }
 
 func printX() {
