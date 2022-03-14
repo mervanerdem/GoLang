@@ -2,17 +2,19 @@ package main
 
 import (
 	"fmt"
-	"time"
+	"sync"
 )
 
 func main() {
 	//Go Routine aynı anda birden çok işlemin yapılmasını sağlayan yapıdır.
+	wg.Add(1) //burdan sonra 1 tane bekleyecek goroutine olduğunu gösterir.
+	go printX()
+	wg.Wait() //burda bekleyecek wg.Add kısmında göterilen goroutini
+	printY()  //bu şekilde sırayla yapılacak tek çekirdekli işlemciler için işlem önceliği verilmiş olur.
 
-	go printX()                //Süre bekletmesi dururken Hhangi işlem daha önce başlıyor hangisi önce bitiyor belirsiz.
-	go printY()                //Bazı çıktılarda X önce bastırılırken ekrana bazı çıktılarda ise Y önce bastırılıyor. Sistemde kararsızlık bulunmakta.
-	time.Sleep(time.Second)    //Ana Fonksiyonu bir saniye bekletiyoruz diğer işlemler yapılması için.
-	fmt.Println("Main Bitişi") // Çalışmasını bitirmeden main GoRoutini bittiğinden yalnızca çıktı görülmekte.
 }
+
+var wg sync.WaitGroup // Wait Group oluşturuşturuldu. GoRoutine bitişini bekler.
 
 func printX() {
 	for i := 0; i < 10; i++ {
@@ -20,6 +22,7 @@ func printX() {
 	}
 	fmt.Println()
 	fmt.Println("---------")
+	wg.Done() //GoRoutine bittiğini devam edebebilir sinyali
 }
 
 func printY() {
