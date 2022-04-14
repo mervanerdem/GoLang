@@ -66,7 +66,8 @@ package main
 
 import (
 	"fmt"
-	"gtin" //Kendi yazdığım bir kütüphane örnek kodları Kütüphane dosyasında bulunmakta. Kendi çalışma dosyanıza indirip kullanabilirsiniz.
+	"github.com/mervanerdem/GoLang/Kütüphane/gtin"
+	//Kendi yazdığım bir kütüphane örnek kodları Kütüphane dosyasında bulunmakta. Kendi çalışma dosyanıza indirip kullanabilirsiniz.
 )
 
 type user struct {

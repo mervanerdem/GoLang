@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"gtin"
+
+	"github.com/mervanerdem/GoLang/Kütüphane/gtin"
 )
 
 func main() {
